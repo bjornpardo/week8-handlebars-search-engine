@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	form(action="/search", method="post")
+		input(type="text", placeholder="Search", name="search")
+		button.search(type='submit') Search
+
+	div#results
+
+
+	script#results-template(type='text/x-handlebars-template')
+		div.result
+			p Description: {{desc}}
+
