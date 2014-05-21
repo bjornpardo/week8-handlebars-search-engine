@@ -18,7 +18,7 @@ app.get('/search', function(req, res) {
 	// res.send(req.body);
 	var searchedText = req.query.search;
 	// console.log(searchedText);
-	var results =[];
+	// var results =[];
 
 	// loop over object in object:
 	for (var key in SearchData) {
@@ -26,13 +26,14 @@ app.get('/search', function(req, res) {
 		for (var prop in obj) {
 			// console.log(obj[prop].desc);
 			if (prop.toLowerCase() === searchedText.toLowerCase()) {
-				console.log(obj[prop].desc);
-				// res.send(prop.toLowerCase());
-				results.push(obj[prop]);
+				// console.log(obj[prop].desc);
+				res.send(obj[prop].desc);
+				// or:
+				// results.push(obj[prop]);
 			}
 		} 
 	}
-	res.send(results);
+	// res.send(results);
 });
 
 var server = app.listen(5244, function() {

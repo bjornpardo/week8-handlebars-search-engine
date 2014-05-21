@@ -11,10 +11,11 @@ console.log('hello');
 		var text = $('input').val();
 		console.log(text);
 		e.preventDefault();
+		$('#results').empty();
 	
 		$.get('/search', { search: text }, function(data) {
 			console.log(data);
-
+			$('#results').append(renderResults({desc : data}));
 		});
 	});	
 });
