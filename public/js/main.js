@@ -7,14 +7,13 @@ console.log('hello');
 
 	var renderResults = Handlebars.compile(templateText);
 
-	$('.search').on('click', function() {
+	$('#searchform').on('submit', function(e) {
 		var text = $('input').val();
 		console.log(text);
-		// return false;
-		// console.log(req.body);
+		e.preventDefault();
 	
-
 		$.get('/search', { search: text }, function(data) {
+			console.log(data);
 
 		});
 	});	
