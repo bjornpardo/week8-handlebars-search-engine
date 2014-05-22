@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var _ = require('underscore');
 var SearchData = require('./models/search-data.json');
 
 var app = express();
@@ -35,6 +36,30 @@ app.get('/search', function(req, res) {
 	}
 	// res.send(results);
 });
+
+var isOdd= function(num) {
+	return num%2!=0;
+}
+
+console.log(isOdd(2));
+console.log(isOdd(1));
+
+var test = ['bjorn', 'sarah', 'miguel', 'lorenzo', 'rocio'];
+var test1 = [1,2,3,4,5];
+var bjorn = 'bjorn';
+
+console.log(_.first(test));
+console.log(_.without(test, 'bjorn'));
+console.log(_.partition(test1, isOdd));
+console.log(_.object(test1, test));
+
+console.log(_.keys(SearchData.programming));
+
+_.each(SearchData.programming.C, console.log);
+
+console.log(_.map(test1,isOdd));
+
+
 
 var server = app.listen(5244, function() {
 	console.log('Express server listening on port ' + server.address().port);

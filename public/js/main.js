@@ -17,5 +17,5 @@ console.log('hello');
 			console.log(data);
 			$('#results').append(renderResults({desc : data}));
 		});
-	});	
+	});
 });
