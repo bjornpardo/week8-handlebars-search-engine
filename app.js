@@ -37,6 +37,7 @@ app.get('/search', function(req, res) {
 	// res.send(results);
 });
 
+// Underscore tests
 var isOdd= function(num) {
 	return num%2!=0;
 }

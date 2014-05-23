@@ -1,0 +1,19 @@
+.input-lg {
+	width: 100%;
+	margin: 50px auto;
+	/*display: inline-block;*/
+	/*text-align: center;*/
+}
+
+.form-inline {
+	/*margin: 0 auto;*/
+	text-align: center;
+}
+
+.btn {
+	margin-left: 5px;
+}
+
+/*.btn-lg {
+	margin: 0 auto;
+}*/

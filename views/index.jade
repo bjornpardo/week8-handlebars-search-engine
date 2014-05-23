@@ -1,13 +1,22 @@
 extends layout
 
 block content
+	h1 
+		strong Programming Languages
+			//- small Search Engine
 	//- form(action="/search", method="post")
 	//- 	input(type="text", placeholder="Search", name="search")
 	//- 	button.search(type='submit') Search
 
 	form#searchform
-		input(type="text", placeholder="Search", name="search")
-		button.search(type='submit') Search
+		//- div.search.input-append
+		//- 	input(class="input-medium" type="text", placeholder="Search for a Programming Language", name="search")
+		//- 		button(class="btn" type="submit")
+		//- 			i.icon-seach 				
+		div.form-inline
+			input(class="form-control input-lg search" type="text", name="search")
+			button.btn.btn-default.btn-lg(type='submit')
+				span.glyphicon.glyphicon-search
 
 	div#results
 
